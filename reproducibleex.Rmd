@@ -1,0 +1,76 @@
+---
+title: "Markdown basics"
+author: "Reinhard Simon"
+date: '2019-03-06'
+output: 
+  word_document: default
+  html_document: default
+  pdf_document: default
+bibliography: references.bib
+---
+
+# Introduction
+
+Markdown provides an easy way to write formatted text like
+
+- *italics*
+- **bold**
+- `code`
+- superscript^2^
+- H~2~O
+- SO~4~^2-^
+- [links](http://google.com)
+
+You can also use it for:
+
+- equations $E = mc^2$
+
+- and bibliographies [@darwin2004origin]
+
+# Results
+```{r}
+2 + 5
+```
+
+```{r echo=FALSE}
+knitr::kable(summary(cars))
+```
+
+
+```{r echo=FALSE}
+plot(cars$speed, cars$dust, type = "l", lwd = "2", col = "blue")
+```
+
+The number of records in the database is `r nrow(cars)`. This means something.
+
+# Session Information
+
+```{r}
+sessionInfo()
+```
+
+```{r}
+data("iris")
+iris
+```
+
+```{r echo=FALSE}
+knitr::kable(summary(iris))
+```
+
+```{r echo=FALSE}
+plot(iris$Petal.Width, iris$Petal.Length, type = "p", lwd = "1", col ="purple")
+```
+
+```{r}
+lm(Petal.Length ~ Petal.Width, data = iris)
+```
+
+There were `r nrow(iris)` iris studied
+
+
+
+# References
+
+
+
