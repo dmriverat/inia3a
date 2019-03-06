@@ -59,7 +59,7 @@ knitr::kable(summary(iris))
 ```
 
 ```{r echo=FALSE}
-plot(iris$Petal.Width, iris$Petal.Length, type = "p", lwd = "1", col ="purple")
+plot(iris$Petal.Width, iris$Petal.Length, type = "p", lwd = "1", col ="green")
 ```
 
 ```{r}
